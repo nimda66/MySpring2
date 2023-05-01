@@ -12,15 +12,14 @@ import java.util.Collections;
 import java.util.List;
 
 @Service
-public class StandartService {
+public class StandartService implements IStandartService {
     private static final Logger log = LoggerFactory.getLogger(StandartService.class);
 
     @Autowired
     private StandardRepository standardRepository;
 
-    /**
-     * @return List of all standards
-     */
+
+    @Override
     public List<Standard> fetchStandardList() {
         List<Standard> standardList = standardRepository.findAll();
         if(CollectionUtils.isEmpty(standardList)) {

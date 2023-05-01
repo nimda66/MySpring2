@@ -21,6 +21,10 @@ public class StandardController {
     @Autowired
     private StandartService standartService;
 
+    /**
+     * call it like 'http://localhost:8080/showStandards'
+     * @return ModelAndView view and a list of all standards
+     */
     @GetMapping(value = "/showStandards")
     public ModelAndView showStandards() {
 

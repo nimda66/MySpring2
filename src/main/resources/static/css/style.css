@@ -1,8 +1,9 @@
-h2 {
+h1 {
     color: rebeccapurple;
 }
 
 th {
+    font-size: larger ;
     border: solid 1px black;
     color: black;
     text-align: center;
