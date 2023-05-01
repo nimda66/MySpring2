@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IStandartService {
     /**
-     * @return List of all standards
+     * @return List of all standards ordered by issue date descending
      */
     List<Standard> fetchStandardList();
 }

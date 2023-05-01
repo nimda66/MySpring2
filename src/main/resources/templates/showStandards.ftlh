@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
         <title>Standards</title>
         <meta charset="UTF-8">
@@ -13,14 +13,20 @@
             <tr>
                 <th>Id</th>
                 <th>Title</th>
+                <th>Dok Nr</th>
+                <th>Issue Date</th>
                 <th>Working Grem</th>
+                <th>Link</th>
             </tr>
 
             <#list standards as standard>
                 <tr>
                     <td>${standard.id}</td>
                     <td>${standard.title}</td>
+                    <td>${standard.dokNr}</td>
+                    <td>${standard.issueDate}</td>
                     <td>${standard.workingGrem}</td>
+                    <td><a href="https://din.de?gremId=${standard.workingGremId}" target="_blank" rel="noopener noreferrer">goto document</a></td>
                 </tr>
             </#list>
         </table>

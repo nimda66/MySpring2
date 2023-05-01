@@ -2,10 +2,17 @@ h1 {
     color: rebeccapurple;
 }
 
+table {
+    border: solid 1px black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
 th {
     font-size: larger ;
     border: solid 1px black;
     color: black;
+    background-color: cadetblue;
     text-align: center;
 }
 
