@@ -6,20 +6,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.util.CollectionUtils;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
 public class StandartService {
     private static final Logger log = LoggerFactory.getLogger(StandartService.class);
 
-
     @Autowired
     private StandardRepository standardRepository;
 
-    public List<Standard> getSortedStandards() {
+    /**
+     * @return List of all standards
+     */
+    public List<Standard> fetchStandardList() {
         List<Standard> standardList = standardRepository.findAll();
-        log.info("StandardList: {0}" , standardList);
+        if(CollectionUtils.isEmpty(standardList)) {
+            log.warn("Standard list is empty");
+            return Collections.emptyList();
+        }
+        standardList.forEach(standard -> log.info("Standard: {} : {}" , standard.getId(), standard.getTitle()));
         return standardList;
     }
 }

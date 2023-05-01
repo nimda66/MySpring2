@@ -1,0 +1,15 @@
+h2 {
+    color: rebeccapurple;
+}
+
+th {
+    border: solid 1px black;
+    color: black;
+    text-align: center;
+}
+
+td {
+    border: solid 1px black;
+    color: darkslategray;
+    text-align: center;
+}

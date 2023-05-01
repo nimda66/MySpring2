@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 
 import java.sql.Date;
 
-@Entity
+@Entity(name = "standards")
 public class Standard {
     @Id
     @GeneratedValue
